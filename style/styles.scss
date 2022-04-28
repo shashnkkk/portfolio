@@ -531,6 +531,36 @@ section {
       }
     }
   }
+
+  .read-icons {
+    display: flex;
+    margin-top: 2rem;
+    a {
+      display: flex;
+      align-items: center;
+      color: var(--color-white);
+      background-color: var(--color-primary);
+      cursor: pointer;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 0 0.4rem;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        background-color: var(--color-white);
+        i {
+          color: var(--color-secondary);
+        }
+      }
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+      }
+    }
+  }
 }
 
 //Contact section
