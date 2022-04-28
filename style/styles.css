@@ -54,9 +54,10 @@ a {
 }
 
 header {
-  height: 100vh;
+  min-height: 100vh;
   color: var(--color-white);
   overflow: hidden;
+  padding: 0 !important;
 }
 
 section {
@@ -68,51 +69,24 @@ section {
   padding: 3rem 18rem;
 }
 
-.section {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+.container {
+  display: none;
+  -webkit-transform: translateY(-100%) scale(0);
+          transform: translateY(-100%) scale(0);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   background-color: var(--color-primary);
 }
 
-.sec1 {
-  display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
-}
-
-.sec2 {
-  display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
-}
-
-.sec3 {
-  display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
-}
-
-.sec4 {
-  display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
-}
-
-.sec5 {
-  display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
-}
-
 .active {
   display: block;
-  -webkit-animation: scaleAnim 1s ease-in-out;
-          animation: scaleAnim 1s ease-in-out;
+  -webkit-animation: appear 1s ease-in-out;
+          animation: appear 1s ease-in-out;
+  -webkit-transform: translateY(0) scaleY(1);
+          transform: translateY(0) scaleY(1);
 }
 
-@-webkit-keyframes scaleAnim {
+@-webkit-keyframes appear {
   0% {
     -webkit-transform: translateY(-100%) scaleY(0);
             transform: translateY(-100%) scaleY(0);
@@ -123,7 +97,7 @@ section {
   }
 }
 
-@keyframes scaleAnim {
+@keyframes appear {
   0% {
     -webkit-transform: translateY(-100%) scaleY(0);
             transform: translateY(-100%) scaleY(0);
@@ -134,7 +108,7 @@ section {
   }
 }
 
-.controlls {
+.controls {
   position: fixed;
   z-index: 10;
   top: 50%;
@@ -156,17 +130,7 @@ section {
           transform: translateY(-50%);
 }
 
-.controlls .active-btn {
-  background-color: var(--color-secondary) !important;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.controlls .active-btn i {
-  color: var(--color-white) !important;
-}
-
-.controlls .control {
+.controls .control {
   padding: 1rem;
   cursor: pointer;
   background-color: var(--color-grey-4);
@@ -176,10 +140,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -188,10 +151,20 @@ section {
           box-shadow: var(--box-shadow-1);
 }
 
-.controlls .control i {
+.controls .control i {
   font-size: 1.2rem;
   color: var(--color-grey-2);
   pointer-events: none;
+}
+
+.controls .active-btn {
+  background-color: var(--color-secondary);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.controls .active-btn i {
+  color: var(--color-white);
 }
 
 .theme-btn {
@@ -229,7 +202,7 @@ section {
   pointer-events: none;
 }
 
-/*.Header-content*/
+/*Header-content*/
 .header-content {
   display: -ms-grid;
   display: grid;
@@ -285,12 +258,11 @@ section {
 }
 
 .header-content .left-header .image img:hover {
-  cursor: default;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  border: 1px solid var(--color-secondary20);
-  -webkit-box-shadow: 10px 40px 150px rgba(0, 0, 0, 0.32);
-          box-shadow: 10px 40px 150px rgba(0, 0, 0, 0.32);
+  border: 1px solid var(--color-secondary);
+  -webkit-box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+          box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
@@ -322,7 +294,7 @@ section {
   line-height: 2rem;
 }
 
-/*about*/
+/*About*/
 .about-container {
   display: -ms-grid;
   display: grid;
@@ -342,7 +314,7 @@ section {
 
 .about-container .right-about .about-item {
   border: 1px solid var(--color-grey-5);
-  border-radius: 50px;
+  border-radius: 5px;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   -webkit-box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
@@ -418,7 +390,7 @@ section {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-gap: 2rem;
 }
 
 .about-stats .progress-bars .progress-bar {
@@ -455,7 +427,6 @@ section {
   background-color: var(--color-grey-4);
   margin-left: 1rem;
   position: relative;
-  border-radius: 15px;
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress span {
@@ -467,23 +438,30 @@ section {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   width: 60%;
-  border-radius: 15px;
-}
-
-.about-stats .progress-bars .progress-bar .progress-con .progress .bakchodi {
-  width: 99%;
-}
-
-.about-stats .progress-bars .progress-bar .progress-con .progress .programming {
-  width: 95%;
-}
-
-.about-stats .progress-bars .progress-bar .progress-con .progress .maths {
-  width: 19%;
 }
 
 .about-stats .progress-bars .progress-bar .progress-con .progress .html {
+  width: 80%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .css {
+  width: 95%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .js {
+  width: 75%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .react {
   width: 60%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .node {
+  width: 87%;
+}
+
+.about-stats .progress-bars .progress-bar .progress-con .progress .python {
+  width: 70%;
 }
 
 .stat-title {
@@ -506,6 +484,7 @@ section {
           transform: translateX(-50%);
 }
 
+/*Timeline*/
 .timeline {
   display: -ms-grid;
   display: grid;
@@ -581,12 +560,13 @@ section {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-gap: 2rem;
   margin-top: 3rem;
 }
 
 .portfolios .portfolio-item {
   position: relative;
+  border-radius: 15px;
 }
 
 .portfolios .portfolio-item img {
@@ -600,11 +580,11 @@ section {
 .portfolios .portfolio-item .hover-item {
   width: 100%;
   height: 100%;
+  background-color: var(--color-secondary);
   position: absolute;
-  background-color: var(--color-white);
-  border-radius: 15px;
   left: 0;
   top: 0;
+  border-radius: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,7 +599,6 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   opacity: 0;
-  scale: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-transition: all 0.4s ease-in-out;
@@ -628,7 +607,7 @@ section {
 
 .portfolios .portfolio-item .hover-item h3 {
   font-size: 1.5rem;
-  color: var(--color-black);
+  color: var(--color-white);
   margin-bottom: 1.5rem;
 }
 
@@ -794,7 +773,7 @@ section {
           justify-content: space-between;
 }
 
-.contact-content-con .left-contact .contact-info .contact-item span {
+.contact-content-con .left-contact .contact-info .contact-item p {
   margin: 0.3rem 0 !important;
   padding: 0 !important;
 }
