@@ -24,7 +24,7 @@
 
 .light-mode {
   --color-primary: #ffffff;
-  --color-secondary: #0eafea;
+  --color-secondary: #c38d9e;
   --color-white: #454e56;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -69,6 +69,7 @@ section {
 }
 
 .container {
+  background: url("../img/background.jpeg") left top / cover;
   display: none;
   transform: translateY(-100%) scale(0);
   transition: all 0.4s ease-in-out;
@@ -227,6 +228,7 @@ section {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
     .about-item {
+      background: #191d2b;
       border: 1px solid var(--color-grey-5);
       border-radius: 5px;
       transition: all 0.4s ease-in-out;
@@ -282,6 +284,7 @@ section {
 }
 
 .about-stats {
+  //background: url("../img/background.jpeg") left top / cover;
   padding-bottom: 4rem;
   .progress-bars {
     display: grid;
