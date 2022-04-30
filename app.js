@@ -53,3 +53,9 @@
     document.body.classList.toggle("light-mode");
   });
 })();
+
+$("#ripple").ripples({
+  resolution: 512,
+  dropRadius: 20,
+  perturbance: 0.04,
+});
