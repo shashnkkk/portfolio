@@ -205,7 +205,7 @@ section {
 
 /*Header-content*/
 .header-content {
-  background: url("/img/background.jpeg") left top/cover;
+  background: url("../img/background.jpeg") left top/cover;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
