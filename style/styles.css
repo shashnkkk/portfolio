@@ -7,8 +7,9 @@
 }
 
 :root {
+  --background-img: url("../img/background.jpeg") left top/cover;
   --color-primary: #191d2b;
-  --color-secondary: #cf700b;
+  --color-secondary: #ff8300;
   --color-secondary20: #27ae60;
   --color-white: #ffffff;
   --color-black: #000;
@@ -24,6 +25,7 @@
 }
 
 .light-mode {
+  --background-img: url("../img/nigth.jpeg") left top/cover;
   --color-primary: #ffffff;
   --color-secondary: #c38d9e;
   --color-white: #454e56;
@@ -39,7 +41,7 @@
 }
 
 body {
-  background-color: var(--color-primary);
+  background: var(--background-img);
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
   color: var(--color-white);
@@ -71,7 +73,7 @@ section {
 }
 
 .container {
-  background: url("../img/background.jpeg") left top/cover;
+  background: var(--background-img);
   display: none;
   -webkit-transform: translateY(-100%) scale(0);
           transform: translateY(-100%) scale(0);
@@ -206,7 +208,7 @@ section {
 
 /*Header-content*/
 .header-content {
-  background: url("../img/background.jpeg") left top/cover;
+  background: var(--background-img);
   background-position: center center;
   display: -ms-grid;
   display: grid;
