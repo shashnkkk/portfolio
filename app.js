@@ -81,3 +81,15 @@ $("#ripple").ripples({
   dropRadius: 20,
   perturbance: 0.04,
 });
+
+$(window).on("load", function () {
+  setTimeout(function () {
+    $("#loading").hide();
+  }, 10000);
+});
+
+// $(document).ready(function () {
+//   setTimeout(function () {
+//     $("#loading").hide();
+//   }, 3000);
+// });
