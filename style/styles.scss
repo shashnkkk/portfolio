@@ -6,7 +6,7 @@
 }
 
 :root {
-  --background-img: url("../img/background.jpeg") left top / cover;
+  --background-img: url("../img/background.jpeg") no-repeat left top / cover;
   --color-primary: #191d2b;
   --color-secondary: #ff8300;
   --color-secondary20: #27ae60;
@@ -24,7 +24,7 @@
 }
 
 .light-mode {
-  --background-img: url("../img/nigth.jpeg") left top / cover;
+  --background-img: url("../img/nigth.jpeg") no-repeat left top / cover;
   --color-primary: #ffffff;
   --color-secondary: #c38d9e;
   --color-white: #454e56;
@@ -683,6 +683,7 @@ section {
   align-self: flex-start;
 }
 .main-btn {
+  background: none;
   border-radius: 30px;
   color: inherit;
   font-weight: 600;
