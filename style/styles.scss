@@ -85,7 +85,7 @@ section {
 
 .active {
   display: block;
-  animation: appear 1s ease-in-out;
+  animation: appear 1.4s ease-in-out;
   transform: translateY(0) scaleY(1);
   @keyframes appear {
     0% {
@@ -769,7 +769,8 @@ section {
   border-radius: 10px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
   transition: all 0.4s ease-out;
-  scroll-behavior: smooth;
+  //scroll-behavior: auto;
+  //scroll-behavior: smooth;
 }
 
 #myBtn:hover {

@@ -85,7 +85,7 @@ $("#ripple").ripples({
 $(window).on("load", function () {
   setTimeout(function () {
     $(".loading").hide();
-  }, 10000);
+  }, 100);
 });
 
 // $(document).ready(function () {

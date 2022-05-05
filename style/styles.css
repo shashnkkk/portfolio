@@ -86,8 +86,8 @@ section {
 
 .active {
   display: block;
-  -webkit-animation: appear 1s ease-in-out;
-          animation: appear 1s ease-in-out;
+  -webkit-animation: appear 1.4s ease-in-out;
+          animation: appear 1.4s ease-in-out;
   -webkit-transform: translateY(0) scaleY(1);
           transform: translateY(0) scaleY(1);
 }
@@ -1063,7 +1063,6 @@ section {
   /* Increase font size */
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
-  scroll-behavior: smooth;
 }
 
 #myBtn:hover {
