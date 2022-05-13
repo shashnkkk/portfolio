@@ -212,7 +212,6 @@ section {
 
 /*Header-content*/
 .header-content {
-  background: var(--background-img);
   background-position: center center;
   display: -ms-grid;
   display: grid;
