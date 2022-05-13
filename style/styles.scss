@@ -8,6 +8,7 @@
 
 :root {
   --background-img: url("../img/background.jpeg") no-repeat left top / cover;
+  --img: url(../img/hehe.jpeg) no-repeat left top / cover;
   --color-primary: #191d2b;
   --color-secondary: #ff8300;
   --color-secondary20: #27ae60;
@@ -25,10 +26,11 @@
 }
 
 .light-mode {
+  --img: url(../img/space.jpeg) no-repeat left top / cover;
   --background-img: url("../img/background-dark.jpg") no-repeat left top / cover;
   --color-primary: #ffffff;
   --color-secondary: #ffffff;
-  --color-white: #6d6d6d;
+  --color-white: #a5a1a1;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey-1: #acc1d0;
@@ -162,7 +164,7 @@ section {
 /*Header-content*/
 
 .header-content {
-  //background: var(--background-img);
+  background: var(--background-img);
   background-position: center center;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -190,6 +192,13 @@ section {
       margin-left: 4rem;
       //background-color: var(--color-black);
       transition: all 0.4s ease-in-out;
+      background: var(--img);
+      &:hover {
+        transform: translateY(-5px) translateX(5px);
+        border: 1px solid var(--color-secondary);
+        box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+        filter: grayscale(0);
+      }
       img {
         border-radius: var(--br-sm-2);
         width: 100%;

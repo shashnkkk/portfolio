@@ -9,6 +9,7 @@
 
 :root {
   --background-img: url("../img/background.jpeg") no-repeat left top/cover;
+  --img: url(../img/hehe.jpeg) no-repeat left top/cover;
   --color-primary: #191d2b;
   --color-secondary: #ff8300;
   --color-secondary20: #27ae60;
@@ -26,10 +27,11 @@
 }
 
 .light-mode {
+  --img: url(../img/space.jpeg) no-repeat left top/cover;
   --background-img: url("../img/background-dark.jpg") no-repeat left top/cover;
   --color-primary: #ffffff;
   --color-secondary: #ffffff;
-  --color-white: #6d6d6d;
+  --color-white: #a5a1a1;
   --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey-1: #acc1d0;
@@ -210,6 +212,7 @@ section {
 
 /*Header-content*/
 .header-content {
+  background: var(--background-img);
   background-position: center center;
   display: -ms-grid;
   display: grid;
@@ -235,6 +238,17 @@ section {
   margin-left: 4rem;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
+  background: var(--img);
+}
+
+.header-content .left-header .image:hover {
+  -webkit-transform: translateY(-5px) translateX(5px);
+          transform: translateY(-5px) translateX(5px);
+  border: 1px solid var(--color-secondary);
+  -webkit-box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+          box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .header-content .left-header .image img {
