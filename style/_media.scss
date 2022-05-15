@@ -3,37 +3,37 @@
 }
 
 @media screen and (max-width: 600px) {
-  header {
+  .home {
+    justify-content: center;
     padding: 0 !important;
+    .home-content {
+      grid-template-columns: repeat(1, 1fr);
+      padding-bottom: 6rem;
+      .right-home {
+        grid-row: 1;
+        padding-right: 0rem !important;
+        width: 90%;
+        margin: 0 auto;
+        .name {
+          font-size: 2.5rem !important;
+          text-align: center;
+          padding-top: 3rem;
+        }
+      }
+      .left-home {
+        .image {
+          margin: 0 auto;
+          width: 90%;
+        }
+        .h-shape {
+          display: none;
+        }
+      }
+    }
   }
   .theme-btn {
     width: 50px;
     height: 50px;
-  }
-  .header-content {
-    grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 6rem;
-  }
-
-  .left-header {
-    .h-shape {
-      display: none;
-    }
-  }
-  .right-header {
-    grid-row: 1;
-    padding-right: 0rem !important;
-    width: 90%;
-    margin: 0 auto;
-    .name {
-      font-size: 2.5rem !important;
-      text-align: center;
-      padding-top: 3rem;
-    }
-  }
-  .header-content .left-header .image {
-    margin: 0 auto;
-    width: 90%;
   }
 
   .controls {
@@ -178,8 +178,12 @@
   .portfolios {
     grid-template-columns: repeat(2, 1fr);
   }
-  .header-content .right-header {
-    padding-right: 9rem;
+  .home {
+    .home-content {
+      .right-home {
+        padding-right: 9rem;
+      }
+    }
   }
 }
 @media screen and (max-width: 660px) {
@@ -218,29 +222,33 @@
   .about-container .left-about {
     padding-right: 0rem;
   }
-  .header-content {
-    grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 6rem;
-  }
+  .home {
+    justify-content: center;
+    padding: 0 !important;
+    .home-content {
+      grid-template-columns: repeat(1, 1fr);
+      padding-bottom: 6rem;
 
-  .left-header {
-    .h-shape {
-      display: none;
-    }
-    .image {
-      width: 90% !important;
-      margin: 0 auto !important;
-    }
-  }
-  .right-header {
-    grid-row: 1;
-    padding-right: 0rem !important;
-    width: 90%;
-    margin: 0 auto;
-    .name {
-      font-size: 2.5rem !important;
-      text-align: center;
-      padding-top: 3rem;
+      .left-home {
+        .h-shape {
+          display: none;
+        }
+        .image {
+          width: 90% !important;
+          margin: 0 auto !important;
+        }
+      }
+      .right-home {
+        grid-row: 1;
+        padding-right: 0rem !important;
+        width: 90%;
+        margin: 0 auto;
+        .name {
+          font-size: 2.5rem !important;
+          text-align: center;
+          padding-top: 3rem;
+        }
+      }
     }
   }
 }
