@@ -391,6 +391,7 @@ section {
 
 /*Timeline*/
 .my-timeline {
+  contain: content;
   margin: 30px;
   backdrop-filter: blur(5px);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -400,6 +401,7 @@ section {
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
+
   .timeline {
     padding: 35px;
     padding-right: 10px;
