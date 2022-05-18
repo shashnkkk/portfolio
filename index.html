@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="style/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,10 +25,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
+    <script src='https://www.gstatic.com/firebasejs/4.3.0/firebase.js'></script>
   </head>
-  <div class="loading">
+  <!-- <div class="loading">
     <img class="loading-image" src="img/ajax-loader.gif" alt="Loading..." />
-  </div>
+  </div> -->
   <body class="main-content">
     <button onclick="topFunction()" id="myBtn" title="Go to top">
         <span><i class="fas fa-angle-double-up"></i></span> 
@@ -361,20 +363,26 @@
             </div>
           </div>
           <div class="right-contact">
-            <form action="https://formspree.io/f/xwkywaod" method="post" class="contact-form">
+            <form  class="contact-form" id="contactform">
+              <div class="alert success-alert">
+                <h3>Success Alert Message</h3>
+                <a class="close">
+                  <i class="fa-solid fa-rectangle-xmark"></i>
+                </a>
+              </div>
                 <div class="input-control i-c-2">
-                    <input name="name" type="text" required placeholder="YOUR NAME">
-                    <input name="email"type="email" required placeholder="YOUR EMAIL">
+                    <input name="name" type="text" required placeholder="YOUR NAME" id="name">
+                    <input name="email" type="email" required placeholder="YOUR EMAIL" id="email">
                 </div>
                 <div class="input-control">
-                    <input type="text" name="SUBJECT" required placeholder="ENTER SUBJECT">
+                    <input type="text" name="SUBJECT" required placeholder="ENTER SUBJECT" id="subject">
                 </div>
                 <div class="input-control">
-                    <textarea name="message" id="" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                    <textarea name="message" id="message" cols="15" rows="8" placeholder="Message Here..."></textarea>
                 </div>
-                <div class="submit-btn">
-                    <button href="#" class="main-btn">
-                        <span type="submit" class="btn-text">Submit</span>
+                <div class="submit-btn" id="submit">
+                    <button type="submit" href="#" class="main-btn">
+                        <span  class="btn-text">Submit</span>
                         <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
                     </button>
                 </div>
