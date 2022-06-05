@@ -9,6 +9,23 @@
 }
 
 :root {
+  --img: url(../img/space.jpeg) no-repeat left top/cover;
+  --background-img: url("../img/background-dark.jpg") no-repeat left top/cover;
+  --color-primary: #ffffff;
+  --color-secondary: #ffffff;
+  --color-white: #a5a1a1;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #acc1d0;
+  --color-grey-2: #6c7983;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #f8f8f8;
+  --color-grey-6: #12181b;
+  --br-sm-2: 14px;
+}
+
+.light-mode {
   --background-img: url("../img/background.jpeg") no-repeat left top/cover;
   --img: url(../img/hehe.jpeg) no-repeat left top/cover;
   --color-primary: #191d2b;
@@ -25,23 +42,6 @@
   --color-grey-6: #12181b;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
-}
-
-.light-mode {
-  --img: url(../img/space.jpeg) no-repeat left top/cover;
-  --background-img: url("../img/background-dark.jpg") no-repeat left top/cover;
-  --color-primary: #ffffff;
-  --color-secondary: #ffffff;
-  --color-white: #a5a1a1;
-  --color-black: #000;
-  --color-grey0: #f8f8f8;
-  --color-grey-1: #acc1d0;
-  --color-grey-2: #6c7983;
-  --color-grey-3: #6c7983;
-  --color-grey-4: #454e56;
-  --color-grey-5: #f8f8f8;
-  --color-grey-6: #12181b;
-  --br-sm-2: 14px;
 }
 
 body {
