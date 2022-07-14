@@ -29,7 +29,7 @@
   --background-img: url("../img/background.jpeg") no-repeat left top / cover;
   --img: url(../img/hehe.jpeg) no-repeat left top / cover;
   --color-primary: #191d2b;
-  --color-secondary: #ff8300;
+  --color-secondary: #ff6f00;
   --color-secondary20: #27ae60;
   --color-white: #ffffff;
   --color-black: #000;
@@ -49,8 +49,8 @@ body {
   background-attachment: fixed;
   background-position: fixed;
   //background-color: var(--color-primary);
-  font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
+  font-family: "Nature Spirit", sans-serif;
+  font-size: 2rem;
   color: var(--color-white);
   transition: all 0.4s ease-in-out;
 }
@@ -222,7 +222,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 18rem;
+    padding-right: 14rem;
     .name {
       font-size: 3rem;
       span {
