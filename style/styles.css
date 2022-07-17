@@ -48,7 +48,7 @@ body {
   background: var(--background-img);
   background-attachment: fixed;
   background-position: fixed;
-  font-family: "Nature Spirit", sans-serif;
+  font-family: "Inconsolata", monospace;
   font-size: 2rem;
   color: var(--color-white);
   -webkit-transition: all 0.4s ease-in-out;
