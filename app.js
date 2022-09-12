@@ -76,23 +76,23 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// $("#ripple").ripples({
-//   resolution: 512,
-//   dropRadius: 20,
-//   perturbance: 0.04,
-// });
+$("#ripple").ripples({
+  resolution: 512,
+  dropRadius: 20,
+  perturbance: 0.04,
+});
 
-// $(window).on("load", function () {
-//   setTimeout(function () {
-//     $(".loading").hide();
-//   }, 5);
-// });
+$(window).on("load", function () {
+  setTimeout(function () {
+    $(".loading").hide();
+  }, 5);
+});
 
-// $(document).ready(function () {
-//   setTimeout(function () {
-//     $("#loading").hide();
-//   }, 3000);
-// });
+$(document).ready(function () {
+  setTimeout(function () {
+    $("#loading").hide();
+  }, 3000);
+});
 
 const firebaseConfig = {
   apiKey: "AIzaSyANxe10sLblvr-7sZmCLDDLqx0EQdkVCQg",
