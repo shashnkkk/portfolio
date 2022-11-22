@@ -1,17 +1,21 @@
-# portfolio
+# The Shanks
 
+Portfolio website built using HTML, Javascript, SCSS
 
-Portfolio website built in React
+This was a website built to showcase my design skills.
 
-This was a website built to showcase my technical skills, web design skills.
+## technologies used
 
-Project timeline and technologies used
-Build a React website in 24 hours to showcase the following:
+website to showcase the following:
+* My technical skill set
+* My web design skill set
+* My projects
 
-My technical skill set
-My web design skill set
-My projects
-Technologies Used
-HTML5
-CSS3
-JavaScript (ES6)
+### Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript (ES6)
+* SCSS
+* Git
+* GitHub
