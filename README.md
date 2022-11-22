@@ -4,7 +4,7 @@ Portfolio website built using HTML, Javascript, SCSS
 
 This was a website built to showcase my design skills.
 
-##website to showcase the following:
+## website to showcase the following:
 * My technical skill set
 * My web design skill set
 * My projects
