@@ -77,17 +77,8 @@ section {
 
 .active {
   display: block;
-  -webkit-animation: appear 1.4s ease-in-out;
-          animation: appear 1.4s ease-in-out;
+  animation: appear 1.4s ease-in-out;
   transform: translateY(0) scaleY(1);
-}
-@-webkit-keyframes appear {
-  0% {
-    transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    transform: translateY(0) scaleY(1);
-  }
 }
 @keyframes appear {
   0% {
@@ -212,6 +203,45 @@ section {
   flex-direction: column;
   justify-content: center;
   padding-right: 14rem;
+}
+.home .right-home .text-holder {
+  display: flex;
+}
+.home .right-home .text-holder .main-text-container {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  overflow: hidden;
+}
+.home .right-home .text-holder .main-text-container .typed-text {
+  color: #ffffff;
+}
+.home .right-home .text-holder .main-text-container .cursor {
+  display: inline-block;
+  background-color: #f3f3f3;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.home .right-home .text-holder .main-text-container .cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: #ccc;
+  }
 }
 .home .right-home .name {
   font-size: 3rem;

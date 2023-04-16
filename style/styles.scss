@@ -221,6 +221,52 @@ section {
     flex-direction: column;
     justify-content: center;
     padding-right: 14rem;
+
+    .text-holder {
+      display: flex;
+      //  justify-content: center;
+      //align-items: center;
+      .main-text-container {
+        font-size: 3rem;
+
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        //  text-align: center;
+        overflow: hidden;
+
+        .typed-text {
+          color: #ffffff;
+        }
+        .cursor {
+          display: inline-block;
+          background-color: #f3f3f3;
+          margin-left: 0.1rem;
+          width: 3px;
+          animation: blink 1s infinite;
+        }
+        .cursor.typing {
+          animation: none;
+        }
+
+        @keyframes blink {
+          0% {
+            background-color: #ccc;
+          }
+          49% {
+            background-color: #ccc;
+          }
+          50% {
+            background-color: transparent;
+          }
+          99% {
+            background-color: transparent;
+          }
+          100% {
+            background-color: #ccc;
+          }
+        }
+      }
+    }
     .name {
       font-size: 3rem;
       span {
